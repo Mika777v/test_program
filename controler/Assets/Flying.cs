@@ -32,14 +32,14 @@ public class Flying : MonoBehaviour
         pitch = Input.GetAxisRaw("Vertical") * (Time.fixedDeltaTime * RotationSpeed);
 
         // 軸回転
-        if (Input.GetAxisRaw("roll_R") < 0.8)
+      /*  if (Input.GetAxisRaw("roll_R") < 0.8)
         {
             roll = Input.GetAxisRaw("roll_R") * (Time.fixedDeltaTime * RotationSpeed);
         }
         else if (Input.GetAxisRaw("roll_L") < 0.8)
         {
             roll = -Input.GetAxisRaw("roll_L") * (Time.fixedDeltaTime * RotationSpeed);
-        }
+        }*/
 
         AddRot.eulerAngles = new Vector3(-pitch, yaw, -roll);
         GetComponent<Rigidbody>().rotation *= AddRot;
